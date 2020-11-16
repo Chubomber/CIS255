@@ -109,12 +109,13 @@ function loadContent() {
             "NewConfirmed": c.NewConfirmed, 
             "NewDeaths": c.NewDeaths,
             "Populations" : populations[c.Slug],
-		  "TotalConfirmed" : c.TotalConfirmed,
-		  "TotalDeaths" : c.TotalDeaths,
-		  "TotalConfirmedPer" : 100000 * c.TotalConfirmed/populations[c.Slug]
+	    "TotalConfirmed" : c.TotalConfirmed,
+	    "TotalDeaths" : c.TotalDeaths,
+	    "TotalConfirmedPer100000" : 100000 * c.TotalConfirmed/populations[c.Slug]
           });
         }
       }
+      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000,'Totalconfrimed100000')
       newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, "NewDeaths", "desc");
 
       chartData.data.datasets[0].backgroundColor 

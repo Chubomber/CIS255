@@ -108,7 +108,9 @@ function loadContent() {
             "Slug": c.Slug, 
             "NewConfirmed": c.NewConfirmed, 
             "NewDeaths": c.NewDeaths,
-            "Populations" : populations[c.Slug]
+            "Populations" : populations[c.Slug],
+		  "TotalConfirmed" : c.TotalConfirmed,
+		  "TotalDeaths" : c.TotalDeaths
           });
         }
       }

@@ -52,7 +52,11 @@ var chartData = {
       label: 'oranges',
       data: [2, 29, 5, 5, 2, 3, 10],
       backgroundColor: "rgba(255,140,0,0.4)"
-    }]
+    },{
+label: 'blueberries',
+data: [2, 29, 5, 5, 2, 3, 10],
+backgroundColor: "rgba(0,0,255,0.4)"
+}]
   },
   options: {
     title: {
@@ -115,7 +119,7 @@ function loadContent() {
           });
         }
       }
-      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000,'Totalconfrimed100000')
+      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000,"TotalConfirmedPer100000","desc")
       newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, "NewDeaths", "desc");
 
       chartData.data.datasets[0].backgroundColor 
@@ -126,6 +130,8 @@ function loadContent() {
         = 'new cases';
       chartData.data.datasets[1].label  
         = 'new deaths';
+	chartData.data.datasets[2].label  
+        = 'Total Cases per 100000';
       chartData.data.labels  
         = newConfirmedOver1000.map( (x) => x.Slug );
       chartData.data.datasets[0].data  
@@ -134,6 +140,9 @@ function loadContent() {
       chartData.data.datasets[1].data  
         = newConfirmedOver1000.map( 
           (x) => x.NewDeaths );
+	chartData.data.datasets[2].data
+        = newConfirmedOver1000.map(
+        (x) => x.Populations/100000 );
       chartData.options.title.text 
         = "Covid 19 Hotspots " + dayjs().toString() ;
       myChart = new Chart(ctx, chartData); 

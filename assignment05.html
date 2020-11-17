@@ -82,10 +82,10 @@ backgroundColor: "rgba(0,0,255,0.4)"
           // logarithmic scale ignores maxTicksLimit
           maxTicksLimit: 11,
           callback: function(label, index, labels) {
-            if(   label/1000 > 100 
+            if(   label/1000 > 100|| 
 	       	  label/1000 == 10||
 	       	  label/1000 == 100||
-	       	  label/1000 == 1000||
+	       	  label/1000 == 1000
                     || label/1000 == 1 
                     || label/1000 == 0.1 
                     || label/1000 == 0.01) 

@@ -8,7 +8,7 @@ body{
 .stripey tr:nth-child(even) {
   background-color: gray;
 }
-#classy{ 
+p.classy{ 
   margin-left: 100px;
 }
 .stripey tr:nth-child(odd) {

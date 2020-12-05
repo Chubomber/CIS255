@@ -8,6 +8,7 @@ body{
 .stripey tr:nth-child(even) {
   background-color: gray;
 }
+#classy{ margin-left 10px;}
 .stripey tr:nth-child(odd) {
   background-color: white;
 }

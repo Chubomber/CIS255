@@ -2,7 +2,7 @@
 body{
   background-color: skyblue;
 }
-#id="igottabeme"{
+#id = igottabeme{
   font-family: Arial, Helvetica, sans-serif;
 }
 .stripey tr:nth-child(even) {

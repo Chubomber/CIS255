@@ -9,7 +9,7 @@ body{
   background-color: gray;
 }
 .classy{ 
-  margin-left: 10px;
+  margin-left: 100px;
 }
 .stripey tr:nth-child(odd) {
   background-color: white;

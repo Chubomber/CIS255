@@ -11,7 +11,9 @@ body{
 p.classy{ 
   margin-left: 10px;
 }
-
+div{
+  margin-bottom: 50px;
+}
 
 .stripey tr:nth-child(odd) {
   background-color: white;
